@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #FFBD33;
+  height: 98vh;
+  animation-name: "opacityPage";
+  -webkit-animation-name: "opacityPage";
+  -moz-animation-name: "opacityPage";
+  -ms-animation-name: "opacityPage";
+  -o-animation-name: "opacityPage";
+  animation-duration: 3s;
+}
+
+@keyframes opacityPage {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color: #FFBD33;
+  }
+}
+
+.slider {
+  height: 427px;
+  width: 640px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  -webkit-transform: translate(-50%, -60%);
+  -moz-transform: translate(-50%, -60%);
+  -ms-transform: translate(-50%, -60%);
+  -o-transform: translate(-50%, -60%);
+  animation-name: "opacitySlide";
+  -webkit-animation-name: "opacitySlide";
+  -moz-animation-name: "opacitySlide";
+  -ms-animation-name: "opacitySlide";
+  -o-animation-name: "opacitySlide";
+  animation-duration: 4s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0%;
+}
+
+@keyframes opacitySlide {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+  }
+  100% {
+    opacity: 100;
+    transform: translate(-50%, -60%);
+    -webkit-transform: translate(-50%, -60%);
+    -moz-transform: translate(-50%, -60%);
+    -ms-transform: translate(-50%, -60%);
+    -o-transform: translate(-50%, -60%);
+  }
+}
+
+.slider .container {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 0px 25px 12px #ffffff73;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+
+.slider .container .img {
+  display: flex;
+  position: absolute;
+  left: 0px;
+  transition-duration: 0.5s;
+}
+
+.slider .container .img img {
+  width: 640px;
+}
+
+.slider .container span {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  background-color: #00000075;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.slider .nextAndPrevious {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.slider .nextAndPrevious button {
+  padding: 5px 8px;
+  width: 150px;
+  background-color: rgb(10, 122, 138);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.slider .nextAndPrevious .numbers span {
+  padding: 5px 10px;
+  background-color: rgb(247,245,247);
+  border-radius: 5px;
+}
+
+.slider .nextAndPrevious .numbers span.special {
+  background-color: rgb(10, 122, 138);
+  color: white;
+} 
+
+.slider .copyright {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: "copyright";
+  -webkit-animation-name: "copyright";
+  -moz-animation-name: "copyright";
+  -ms-animation-name: "copyright";
+  -o-animation-name: "copyright";
+  animation-duration: 3s;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+.slider .copyright p {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.slider .copyright img {
+  width: 125px;
+  height: 125px;
+}
+
+@keyframes copyright {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
